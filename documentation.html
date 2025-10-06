@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QSSI Link — Documentation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-left">
+      <a class="brand" href="index.html">QSSI Link</a>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="framework.html">Framework</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="section card">
+      <h1>Documentation & SOPs</h1>
+      <p class="lead">SOP templates and webhook payload samples to wire signaling between links. Use the generator below to create payloads tied to your chain.</p>
+
+      <h2>Webhook Payload Generator</h2>
+      <p class="small muted">Select a node in Simulation and click "Generate payload" there — or edit JSON below manually.</p>
+
+      <textarea id="payloadTextarea" rows="10" class="input code" placeholder="{ 'source_link': 'anchor', ... }"></textarea>
+
+      <div class="control-row" style="margin-top:12px;">
+        <button class="btn" id="genPayloadBtn">Generate (from Selection)</button>
+        <button class="btn ghost" id="copyPayloadBtn">Copy to Clipboard</button>
+        <button class="btn ghost" id="downloadPayloadBtn">Download JSON</button>
+      </div>
+
+      <h2 style="margin-top:18px">Recommended telemetry</h2>
+      <ul>
+        <li>timestamps (ISO8601)</li>
+        <li>subject identifiers (hashed IDs)</li>
+        <li>link-specific context (device IDs, confidence)</li>
+        <li>next-link suggestion (if appropriate)</li>
+      </ul>
+
+      <p style="margin-top:12px"><a class="btn" href="index.html">Home</a></p>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
