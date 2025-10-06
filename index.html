@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QSSI Link — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <a class="brand" href="index.html">QSSI Link</a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="framework.html">Framework</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero card">
+      <div class="hero-left">
+        <h1>QSSI Link</h1>
+        <p class="tagline">Chain-Based Security for Real Estate Systems</p>
+        <p class="lead">Visualize, design, and test sequential security chains — Anchor → Control → Filter → Sink. Add, rename, reorder, and export your chain architecture.</p>
+        <p>
+          <a class="btn" href="framework.html">Explore the Framework</a>
+          <a class="btn ghost" href="simulation.html">Open the Simulation</a>
+        </p>
+      </div>
+      <div class="hero-right">
+        <img src="assets/link-diagram.png" alt="Link diagram (optional)" class="hero-img" onerror="this.style.display='none'">
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Why Link?</h2>
+      <p>Link structures adversary movement through predictable checkpoints that provide robust telemetry and automated hardening. This allows clean exits and faster decision-making when things go wrong.</p>
+      <ul class="features">
+        <li><strong>Sequential barriers</strong> yield predictable traversal.</li>
+        <li><strong>Chained observability</strong> correlates events quickly.</li>
+        <li><strong>Adaptive hardening</strong> tightens adjacent nodes on alert.</li>
+        <li><strong>Export & Simulate</strong> to validate designs.</li>
+      </ul>
+    </section>
+
+    <section class="card grid">
+      <div>
+        <h3>Get started</h3>
+        <p>Open the Simulation to edit your chain and test behaviors. Export PNG or JSON for documentation and training.</p>
+        <p><a class="btn" href="simulation.html">Open Simulation</a></p>
+      </div>
+      <div>
+        <h3>Docs & API</h3>
+        <p>Generate webhook payloads in Documentation and copy them to your automation pipeline or logging stack.</p>
+        <p><a class="btn ghost" href="documentation.html">Open Docs</a></p>
+      </div>
+    </section>
+
+    <footer class="foot card">
+      <p>© QSSI Link · Chain-based security · Theme: black / red / white</p>
+    </footer>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
