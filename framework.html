@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QSSI Link — Framework</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-left">
+      <a class="brand" href="index.html">QSSI Link</a>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="framework.html">Framework</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="section card">
+      <h1>Link — Chain-Based Security</h1>
+      <p class="lead">Force adversaries down ordered routes of linked checkpoints. Each node both detects and signals neighboring nodes — the chain exposes intent and funnels threats to a controlled sink.</p>
+
+      <h2>Core Concepts</h2>
+      <ul>
+        <li><strong>Anchor:</strong> Outer detection and early telemetry.</li>
+        <li><strong>Control:</strong> Identity and procedural checks.</li>
+        <li><strong>Filter:</strong> Behavioral or deep validation.</li>
+        <li><strong>Sink:</strong> Decisive action node (isolate, evict, escalate).</li>
+      </ul>
+
+      <h2>Checklist</h2>
+      <ul class="checklist">
+        <li>Map routes & ingress/egress</li>
+        <li>Define link types for every route</li>
+        <li>Install telemetry & timestamps on links</li>
+        <li>Wire signals (webhooks / API calls) between adjacent links</li>
+        <li>Define failover links for resilience</li>
+        <li>Predefine hardening & exit rules</li>
+        <li>Run simulated traversals and tune thresholds</li>
+      </ul>
+
+      <p><a class="btn" href="simulation.html">Open Simulation</a> <a class="btn ghost" href="documentation.html">View SOP Templates</a></p>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
