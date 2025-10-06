@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QSSI Link — Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <a class="brand" href="index.html">QSSI Link</a>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="framework.html">Framework</a>
+      <a href="simulation.html">Simulation</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="section card">
+      <h1>Interactive Chain Simulation</h1>
+      <p class="lead">Edit the chain on the fly — add, rename, reorder, simulate alerts, and export. LocalStorage keeps your custom chain between sessions.</p>
+
+      <div class="sim-area">
+        <svg id="chainSvg" class="chain-svg" viewBox="0 0 900 260" aria-label="Chain simulation"></svg>
+
+        <div class="sim-controls card" style="min-width:280px;">
+          <div style="display:flex;gap:8px;align-items:center;justify-content:space-between;">
+            <strong>Controls</strong>
+            <small class="small muted">Local save auto-applies</small>
+          </div>
+
+          <div class="control-row" style="margin-top:12px;">
+            <button class="btn" id="stepBtn">Step Node</button>
+            <button class="btn ghost" id="resetBtn">Reset</button>
+            <button class="btn ghost" id="alertBtn">Simulate Alert</button>
+          </div>
+
+          <div style="margin-top:12px;">
+            <label class="small muted">Selected node label</label>
+            <input id="nodeLabel" class="input" placeholder="Node label">
+            <div class="control-row" style="margin-top:8px;">
+              <button class="btn ghost" id="addNodeBtn">Add Node</button>
+              <button class="btn ghost" id="removeNodeBtn">Remove</button>
+            </div>
+            <div class="control-row" style="margin-top:8px;">
+              <button class="btn ghost" id="moveUpBtn">Move Up</button>
+              <button class="btn ghost" id="moveDownBtn">Move Down</button>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <strong>Persistence & Export</strong>
+            <div class="control-row" style="margin-top:8px;">
+              <button class="btn ghost" id="saveChainBtn">Save</button>
+              <button class="btn ghost" id="loadChainBtn">Load</button>
+            </div>
+            <div class="control-row" style="margin-top:8px;">
+              <button class="btn" id="exportPNGBtn">Export PNG</button>
+              <button class="btn ghost" id="exportJSONBtn">Export JSON</button>
+              <button class="btn ghost" id="copyChainBtn">Copy JSON</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;">
+            <strong class="small muted">Log</strong>
+            <div id="log" class="log"></div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:10px"><a class="btn" href="framework.html">Back to Framework</a></p>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
